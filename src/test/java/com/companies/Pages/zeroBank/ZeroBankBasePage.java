@@ -18,10 +18,5 @@ public class ZeroBankBasePage {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("urlZeroBank"));
     }
-    @FindBy(xpath = "//div[@class='page-header']/h3")
-    private WebElement headerName;
 
-    public String getHeaderName(){
-        return headerName.getText();
-    }
 }

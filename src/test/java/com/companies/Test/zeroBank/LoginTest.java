@@ -1,12 +1,12 @@
 package com.companies.Test.zeroBank;
 
 import com.companies.Pages.zeroBank.ZeroBankBasePage;
-import com.companies.Pages.zeroBank.ZeroBankPracticePage;
+import com.companies.Pages.zeroBank.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Practice_Page extends ZeroBankBasePage {
-    ZeroBankPracticePage zeroBankPracticePage = new ZeroBankPracticePage();
+public class LoginTest extends ZeroBankBasePage {
+    LoginPage loginPage = new LoginPage();
 
 
     @Test(description = "TC #2: Zero Bank header verification\n" +
@@ -16,7 +16,7 @@ public class Practice_Page extends ZeroBankBasePage {
             "Expected: “Log in to ZeroBank”")
 
     public void headerVerification(){
-        String actualHeaderName = getHeaderName();
+        String actualHeaderName = loginPage.getHeaderName();
         System.out.println(actualHeaderName);
         String expectedHeaderName = "Log in to ZeroBank";
         System.out.println(expectedHeaderName);

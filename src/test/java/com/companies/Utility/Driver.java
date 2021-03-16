@@ -1,6 +1,7 @@
 package com.companies.Utility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,6 +24,8 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
+                    // Dimension dimension = new Dimension(300,300);
+                    //driver.manage().window().setSize(dimension);
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();

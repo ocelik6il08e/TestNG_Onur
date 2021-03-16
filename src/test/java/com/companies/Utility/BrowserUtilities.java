@@ -1,8 +1,8 @@
 package com.companies.Utility;
 
-public class BrowserMethods {
+public class BrowserUtilities {
 
-    public String getTitle(){
+    public static String getTitle(){
         return   Driver.getDriver().getTitle();
     }
 }
