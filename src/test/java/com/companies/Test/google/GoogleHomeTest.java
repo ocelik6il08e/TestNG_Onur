@@ -28,7 +28,15 @@ public class GoogleHomeTest extends GoogleBasePage {
         System.out.println("After Search : " + Driver.getDriver().getTitle());
         Assert.assertTrue(Driver.getDriver().getTitle().contains(text), "There is no " + text + " in the title.");
 
+    }
+    @Test(priority = 2)
 
+    public void afterSendTextTitleVerification2() {
+        String text = "apple";
+        System.out.println("Before Search : " + Driver.getDriver().getTitle());
+        searchText(text);
+        System.out.println("After Search : " + Driver.getDriver().getTitle());
+        Assert.assertTrue(Driver.getDriver().getTitle().startsWith(text), "There is no " + text + " in the title.");
 
     }
 }
