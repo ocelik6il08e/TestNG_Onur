@@ -29,6 +29,7 @@ public class GoogleHomeTest extends GoogleBasePage {
         Assert.assertTrue(Driver.getDriver().getTitle().contains(text), "There is no " + text + " in the title.");
 
     }
+
     @Test(priority = 2)
 
     public void afterSendTextTitleVerification2() {

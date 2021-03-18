@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 
-public class GoogleBasePage {
+public abstract class GoogleBasePage {
 
     public GoogleBasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -21,7 +21,7 @@ public class GoogleBasePage {
 
 
     @FindBy(name = "q")
-    private WebElement searchInput;
+    public WebElement searchInput;
 
     public void searchText(String text){
         searchInput.sendKeys(text + Keys.ENTER);

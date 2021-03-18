@@ -2,6 +2,7 @@ package com.companies.Test.smartBear;
 
 import com.companies.Pages.smartBear.LoginPage;
 import com.companies.Utility.BrowserUtilities;
+import com.companies.Utility.ConfigurationReader;
 import com.companies.Utility.Driver;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
@@ -17,13 +18,13 @@ public class LoginTest extends LoginPage {
             "Expected: Web Orders")
 
     public void userCredentialsTest() {
-        inputUserID();
-        inputUserPASS();
-        clickLogin();
+        String userName= ConfigurationReader.getProperty("smartBearUserName");
+        String passWord = ConfigurationReader.getProperty("smartBearUserPass");
+        login(userName,passWord);
 
         String actualTitle = BrowserUtilities.getTitle();
         String expectedTitle = "Web Orders";
-        Assert.assertEquals(actualTitle,expectedTitle,"Titles are Not match ! ");
+        Assert.assertEquals(actualTitle, expectedTitle, "Titles are Not match ! ");
 
 
     }

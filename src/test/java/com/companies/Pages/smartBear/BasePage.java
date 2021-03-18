@@ -5,7 +5,7 @@ import com.companies.Utility.Driver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 
-public class BasePage {
+public abstract class BasePage {
 
 
     public BasePage(){
